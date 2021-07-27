@@ -1,0 +1,115 @@
+.intro {
+    display: block;
+    max-width: 100%;
+    height: 640px;
+}
+.intro__text {
+    position: relative;
+    right: -10px;
+    top: 145px;
+    font-size: 35px;
+    line-height: 36px;
+}
+.intro__img {
+    background-image: url("../img/room.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom 100px right 364px;
+    width: 965px;
+    height: 640px;
+    margin: 0 auto;
+}
+.intro__contacts {
+    display: flex;
+    justify-content: space-between;
+    right: 0;
+    top: -100px;
+    padding: 20px;
+    position: relative;
+    background-color: #ffcc01;
+    width: 100vw;
+    max-width: 1100px;
+}
+.intro__contacts a {
+    padding-left: 17px;
+}
+.intro__contacts a::before {
+    position: absolute;
+    content: '';
+    background-repeat: no-repeat;
+}
+.intro__contacts a:first-child:before {
+    background: url("../img/phone.svg");
+    width: 15px;
+    height: 15px;
+    left: 15px;
+    top: 22px;
+}
+.intro__contacts a:last-child:before {
+    background: url("../img/location.svg");
+    width: 10px;
+    height: 20px;
+    right: 145px;
+    top: 20px;
+}
+
+@media screen and (min-width: 576px) {
+    .intro {
+        height: 575px;
+    }
+    .intro__img {
+        background-position: bottom 100px right 0px;
+    }
+    .intro__contacts {
+        top: -170px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .intro__text {
+        right: -20px;
+    }
+    .intro__contacts {
+        right: -17%;
+        max-width: 590px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .intro {
+        width: 100vw;
+    }
+    .intro-wrapper {
+        width: 965px;
+        margin: 0 auto;
+        position: relative;
+    }
+    .intro__text {
+        right: -70px;
+    }
+    .intro__contacts {
+        right: 0;
+        position: absolute;
+        top: 482px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .intro {
+        max-width: 1100px;
+        margin: 0 auto;
+        position: relative;
+    }
+    .intro__img {
+        margin-left: auto;
+        margin-right: 0;
+    }
+    .intro__text {
+        font-size: 62px;
+        line-height: 60px;
+        right: 130px;
+    }
+    .intro__contacts {
+        right: 0px;
+        top: 460px;
+    }
+}

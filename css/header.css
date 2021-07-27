@@ -1,0 +1,123 @@
+.header__nav {
+    max-width: 1100px;
+    width: 100vw;
+}
+#checkbox-menu, .toggle {
+    display: none;
+}
+#checkbox-menu:checked + label .header__list-touch {
+    height: 350px;
+}
+#checkbox-menu:checked + label .header__list-touch li {
+    opacity: 1;
+    visibility: visible;
+    transition: all .7s linear;
+}
+.header__logo {
+    font-size: 24px;
+    font-weight: 700;
+}
+.header__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 0;
+    transition: height .3s linear;
+}
+.header__list li {
+    display: flex;
+    align-self: center;
+    width: 95%;
+    opacity: 0;
+    visibility: hidden;
+}
+.header__list li a {
+    width: 95%;
+    text-align: center;
+    align-self: center;
+    align-content: center;
+    padding: 10px 15px;
+    transition: background .2s linear;
+}
+.header__list li a:hover {
+    background: #ffcc01;
+    border-radius: 3px;
+}
+.header__toggle {
+    position: relative;
+    clear: both;
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    line-height: 40px;
+    width: 100%;
+    background: #ffcc01;
+    transition: all .1s linear;
+    color: transparent;
+}
+.header__toggle:hover {
+    background: #d3a900;
+}
+.header__toggle::after {
+    position: absolute;
+    content: '';
+    background: url("../img/burger.svg");
+    width: 24px;
+    height: 20px;
+    top: 10px;
+    left: calc(50% - 12px);
+}
+@media screen and (min-width: 768px) {
+    .header__toggle {
+        display: none;
+    }
+    .header__list {
+        height: 80px;
+        flex-direction: row;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .header__list li {
+        opacity: 1;
+        visibility: visible;
+    }
+    .header__list li:last-child {
+        display: none;
+    }
+    .header__list li a {
+        padding: 10px 5px;
+    }
+    .header__logo {
+        margin-right: 60px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .header__list {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .header__logo {
+        margin-right: 47px;
+    }
+    .header__list li:last-child {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .header__nav {
+        margin: auto;
+        max-width: 1100px;
+        width: 100%;
+    }
+    .header__list {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .header__logo,
+    .header__contacts {
+        margin-right: 100px;
+    }
+}
